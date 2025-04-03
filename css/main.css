@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+
+@font-face {
+  font-family: 'Big Shoulders Display';
+  src: url('../assets/fonts/big-shoulders-display.bold.ttf') format('truetype');
+}
+
+:root {
+  --color-1: #f2f2f2;
+  --color-2: #000000;
+  --color-3: #ffffff;
+  --color-4: #004140;
+  --color-5: #006971;
+  --color-6: #e28625;
+  --color-7: #19b89d;
+  --color-8: #26b5c0;
+  --color-9: #ffd473;
+}
+
+:root {
+  --font-heading: 700 2.5rem / normal 'Big Shoulders Display', sans-serif;
+  --font-body: 400 0.9375rem / 1.5625rem 'Lexend Deca', sans-serif;
+}
+
+/* css reset begins */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* css reset ends */
+
+/* selector css */
+
+body {
+  background-color: var(--color-1);
+  color: var(--color-3);
+  display: flex;
+  font: var(--font-body);
+  place-content: center;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+/* class css */
+
+.attribution {
+  display: none;
+}
+
+.btn {
+  border: 1px solid var(--color-3);
+  border-radius: 50vh;
+  cursor: pointer;
+  margin-top: 3.75rem;
+  padding: 0.6875rem 2rem;
+  width: fit-content;
+}
+
+.card {
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  min-width: 327px;
+  max-width: 920px;
+  overflow: hidden;
+  place-self: center;
+}
+
+.card-item {
+  display: grid;
+  gap: 1.5625rem;
+  padding: 3rem;
+}
+
+.card-item img {
+  margin-bottom: 0.625rem;
+}
+
+.card-item h2 {
+  color: var(--color-1);
+  font: var(--font-heading);
+  text-transform: uppercase;
+}
+
+.card-item p {
+  opacity: 0.75;
+}
+
+.card-item-sedan {
+  background-color: var(--color-6);
+}
+
+.card-item-sedan .btn {
+  color: var(--color-6);
+}
+
+.card-item-suv {
+  background-color: var(--color-5);
+}
+
+.card-item-suv .btn {
+  color: var(--color-5);
+}
+
+.card-item-luxury {
+  background-color: var(--color-4);
+}
+
+.card-item-luxury .btn {
+  color: var(--color-4);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--color-3);
+}
+
+/* media queries */
+
+@media (min-width: 765px) {
+  .card {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
